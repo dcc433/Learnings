@@ -1,0 +1,15 @@
+import random
+numbertobeguessed = random.randint(1,100)
+print(numbertobeguessed)
+numberofguesses = 0
+
+while True:
+    guess = int(input("Your guess here: "))
+    numberofguesses += 1
+    if guess < numbertobeguessed:
+        print("too low")
+    elif guess > numbertobeguessed:
+        print("too high")
+    else:
+        print(f"correct! you tried {numberofguesses} times")
+        break
