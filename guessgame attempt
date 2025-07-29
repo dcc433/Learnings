@@ -1,0 +1,21 @@
+import random
+def guessgame():
+    print("welcome")
+    numbertobeguessed = random.randint(1,100)
+    numberofguesses = 0
+    while True:
+        while True:
+            guess = int(input("Put your guess here: "))
+            numberofguesses += 1
+            if guess < numbertobeguessed:
+                print("too low")
+            elif guess > numbertobeguessed:
+                print("too high")
+            else: 
+                print(f"correct guess! you tried {numberofguesses} time")
+                break
+        checkreplay = input("Replay, y/n? ")
+        if checkreplay != "y":
+            print("Come back later")
+            break
+guessgame()
