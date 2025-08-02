@@ -1,0 +1,11 @@
+times = int(input("how many times: "))
+total = 0
+tr = 0
+numlist = []
+while tr < times:
+    number = float(input("number: "))
+    total += number
+    tr += 1
+    numlist.append(number)
+print(f"your sum is {total}")
+print(f"from numbers: {numlist}")
